@@ -1,0 +1,48 @@
+.header {
+    cursor: default;
+    text-align: center;
+}
+
+.header h1 {
+    align-items: center;
+    cursor: pointer;
+    font-size: 2rem;
+    padding: 1.5rem;
+    user-select: none;
+    border: 0px;
+    gap: 0.25rem;
+}
+
+.headerSvgBlock {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+}
+
+.headerSvg {
+    background-image: url("/src/img/header-svg.svg");
+    width: 65px;
+    height: 65px;
+    background-repeat: no-repeat;
+    -webkit-filter: drop-shadow(3px 3px 3px #333);
+    filter: drop-shadow(3px 3px 3px #333);
+    -webkit-transition: all 200ms ease-in-out;
+    transition: all 200ms ease-in-out;
+    cursor: pointer;
+}
+
+.headerSvg:hover{
+    -webkit-filter: drop-shadow(6px 6px 6px #333);
+    filter: drop-shadow(6px 6px 6px #333);
+    -webkit-transition: all 200ms ease-in-out;
+    transition: all 200ms ease-in-out;
+    -webkit-transform: scale(1.10) rotate(-4.5deg);
+    -ms-transform: scale(1.10) rotate(-4.5deg);
+    transform: scale(1.10) rotate(-4.5deg);
+}
+
