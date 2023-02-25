@@ -2,7 +2,9 @@ import { useState, useEffect } from "react";
 import ActiveBoard from "../ActiveBoard/ActiveBoard";
 import s from "./startBoard.module.css"
 
-function StartBoard() {
+
+
+const StartBoard: React.FC = () => {
 
     const [mode, setMode] = useState({
         isOpen: false,
@@ -14,7 +16,7 @@ function StartBoard() {
             isOpen: !mode.isOpen,
             title: mode.title === "Creating a board" ? "Create a new board..." : "Creating a board"
         })
-        console.log("ACTIVATE MODE")
+        // console.log("ACTIVATE MODE")
     }
 
     return <>

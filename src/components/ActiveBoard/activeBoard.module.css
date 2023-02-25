@@ -9,23 +9,12 @@
     margin: 10px;
 }
 
-.boardBasic p {
+.text {
     font-size: 14px;
     text-shadow: 0px 0px 3px #000;
     font-weight: 400;
     color: white;
-    margin: 22px 0;
-}
-
-.inputData {
-    padding: 11px 15px;
-    font-size: 16px;
-    border-radius: 5px;
-    border: 2.5px solid hsla(0,0%,100%,.8);
-    width: 100%;
-    -webkit-box-shadow: 0 3px 3px rgb(0 0 0 / 16%), 0 3px 3px rgb(0 0 0 / 23%);
-    box-shadow: 0 3px 3px rgb(0 0 0 / 16%), 0 3px 3px rgb(0 0 0 / 23%);
-    width: 250px;
+    margin: 20px 0;
 }
 
 .boardButtonGroup {
@@ -72,4 +61,28 @@
     transition: all 200ms ease-in-out;
     background-color: none;
     color: #00ffc5;
+}
+
+.inputStyle {
+    padding: 11px 15px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 2.5px solid hsla(0,0%,100%,.8);
+    width: 100%;
+    -webkit-box-shadow: 0 3px 3px rgb(0 0 0 / 16%), 0 3px 3px rgb(0 0 0 / 23%);
+    box-shadow: 0 3px 3px rgb(0 0 0 / 16%), 0 3px 3px rgb(0 0 0 / 23%);
+    width: 250px;
+}
+
+.error {
+    color: #000;
+    text-shadow: 1px 1px 1px #fff;
+    font-weight: 400;
+    margin: 10px 0 0;
+    text-align: center;
+    font-size: 14px;
+}
+
+.inputStyle:focus-visible {
+    outline: -webkit-focus-ring-color auto 1px;
 }

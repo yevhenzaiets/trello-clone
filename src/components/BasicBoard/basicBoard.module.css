@@ -1,0 +1,75 @@
+.boardBody {
+    width: 345px;
+    /* height: 100%; */
+    margin: 20px;
+    background-color: white;
+    padding: 6px 0 30px 0;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-align-items: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    border-radius: 5.5px;
+    box-shadow: 0 3px 6px rgb(0 0 0 / 16%), 0 3px 6px rgb(0 0 0 / 23%);
+    cursor: pointer;
+    -webkit-transition: 200ms ease-in-out;
+    transition: 200ms ease-in-out;
+    font-weight: 900;
+}
+
+.boardBody:hover {
+    box-shadow: 0 10px 20px rgb(0 0 0 / 19%), 0 6px 6px rgb(0 0 0 / 23%);
+    -webkit-transition: 200ms ease-in-out;
+    transition: 200ms ease-in-out;
+    -webkit-transform: scale(1.10);
+    -ms-transform: scale(1.10);
+    transform: scale(1.10);
+}
+
+.boardBody span {
+    font-size: 21px;
+    margin-block-start: 10px;
+    margin-block-end: 10px;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+    display:block;
+    color: #333;
+    word-break: break-all;
+    padding: 10px;
+    -webkit-animation: eMLfYp 200ms linear;
+    animation: eMLfYp 200ms linear;
+}
+
+.removeButtonBlock{
+    display: flex;
+    align-self: self-end;
+}
+
+.removeButton {
+    background-image: url("../../img/closeIcon.svg");
+    background-repeat: no-repeat;
+    width: 24px;
+    height: 24px;
+    padding: 5px;
+    -webkit-transition: all 200ms ease-in-out;
+    transition: all 200ms ease-in-out;
+}
+
+.removeButton:hover {
+    -webkit-transition: all 200ms ease-in-out;
+    transition: all 200ms ease-in-out;
+    -webkit-transform: scale(1.25) rotate(4.5deg);
+    -ms-transform: scale(1.25) rotate(4.5deg);
+    transform: scale(1.25) rotate(4.5deg);
+} 
