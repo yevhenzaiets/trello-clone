@@ -12,7 +12,7 @@ const Main: React.FC = () => {
     <main className={s.main}>
       <StartBoard />
       {boardsCollection.map((board) => (
-        <BasicBoard key={board.id} id={board.id} title={board.title} completed={!board.completed} />
+        <BasicBoard key={board.id} id={board.id} title={board.title} isActive={board.isActive} />
       ))}
     </main>
   )

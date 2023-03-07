@@ -16,7 +16,6 @@ const ActiveBoard: React.FC<ActiveBoardProps> = ({ closeBoard }) => {
   const dispatch = useAppDispatch()
 
   const checkInput = (e: ChangeEvent<HTMLInputElement>) => {
-    console.log(e.currentTarget.value)
     setTitle(e.currentTarget.value);
     setCorrectTitle(true);
   }

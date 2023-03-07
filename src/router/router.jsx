@@ -1,16 +1,24 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import App from "../App";
-import ErrorPage from "../components/ErrorPage/ErrorPage";
+import Main from "../components/Main/Main";
+import ErrorPage from "../components/Routing/ErrorPage/ErrorPage";
+import Layout from "../components/Routing/Layout/Layout";
+import List from "../components/BoardBody/BoardBody";
 
 export const router = createBrowserRouter([
   {
     path: "/",
-    element: <App/>,
-    errorElement: <ErrorPage/>
-  },
-  {
-    path: "/list",
-    element: <>LIST</>
+    element: <Layout/>,
+    errorElement: <ErrorPage/>,
+    children: [
+      {
+        element: <Main/>,
+        index: true
+      },
+      {
+        path: "/list",
+        element: <List/>
+      },
+    ]
   },
 ]);
 

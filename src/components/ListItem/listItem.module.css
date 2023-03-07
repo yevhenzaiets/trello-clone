@@ -1,0 +1,57 @@
+.listWrapper{
+  width: 250px;
+  height: auto;
+  margin: 0 20px;
+  background-color: rgba(255,255,255,0.45);
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 10px 20px rgb(0 0 0 / 19%), 0 6px 6px rgb(0 0 0 / 23%)
+}
+
+.inputList {
+  padding: 11px 15px;
+  font-size: 16px;
+  border-radius: 5px;
+  border: 2.5px solid hsla(0,0%,100%,.8);
+  width: 100%;
+  -webkit-box-shadow: 0 3px 3px rgb(0 0 0 / 16%), 0 3px 3px rgb(0 0 0 / 23%);
+  box-shadow: 0 3px 3px rgb(0 0 0 / 16%), 0 3px 3px rgb(0 0 0 / 23%);
+  width: 200px;
+}
+
+.closeButton{
+  display: flex;
+  align-self: self-end;
+}
+
+.closeLogo {
+  background-image: url("../../img/closeIcon.svg");
+  background-repeat: no-repeat;
+  width: 24px;
+  height: 24px;
+  padding: 5px;
+  -webkit-transition: all 200ms ease-in-out;
+  transition: all 200ms ease-in-out;
+}
+
+.closeLogo:hover {
+  -webkit-transition: all 200ms ease-in-out;
+  transition: all 200ms ease-in-out;
+  -webkit-transform: scale(1.25) rotate(4.5deg);
+  -ms-transform: scale(1.25) rotate(4.5deg);
+  transform: scale(1.25) rotate(4.5deg);
+} 
+
+.inputBlock {
+  display: flex;
+  align-self: center;
+  align-items: center;
+  justify-content: center;
+}
+
+.inputList:focus-visible {
+  outline: -webkit-focus-ring-color auto 1px;
+}
