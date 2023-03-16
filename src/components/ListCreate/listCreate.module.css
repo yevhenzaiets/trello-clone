@@ -1,7 +1,7 @@
 .listWrapper{
-  width: 250px;
+  width: 300px;
   height: auto;
-  margin: 0 20px;
+  padding: 0 0 20px 0;
   background-color: rgba(255,255,255,0.45);
   display: -webkit-box;
   display: -webkit-flex;
@@ -25,6 +25,7 @@
 .closeButton{
   display: flex;
   align-self: self-end;
+  cursor: pointer;
 }
 
 .closeLogo {
@@ -54,4 +55,9 @@
 
 .inputList:focus-visible {
   outline: -webkit-focus-ring-color auto 1px;
+}
+
+.listArea {
+  display: flex;
+  gap: 25px;
 }

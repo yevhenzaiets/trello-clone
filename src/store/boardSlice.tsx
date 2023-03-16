@@ -4,16 +4,21 @@ type Board = {
   id: string;
   title: string;
   isActive: boolean;
+  lists: Lists[];
+}
+
+interface Lists {
+  id: string;
+  name: string;
+  tasks: [];
 }
 
 type BoardsState = {
   boards: Board[],
-  lists: Board[],
 }
 
 const initialState: BoardsState = {
   boards: [],
-  lists: [],
 }
 
 const boardsSlice = createSlice({
@@ -25,16 +30,26 @@ const boardsSlice = createSlice({
         id: new Date().toISOString(),
         title: action.payload,
         isActive: false,
+        lists: [],
       });
     },
     removeBoard(state, action: PayloadAction<string>) {
       state.boards = state.boards.filter(board => board.id !== action.payload)
     },
     setActiveBoard(state, action: PayloadAction<string>) {
-      state.boards.map(board => board.isActive = false)
-      const currentBoard = state.boards.find(board => board.id === action.payload)
+      state.boards.map(board => board.isActive = false);
+      const currentBoard = state.boards.find(board => board.id === action.payload);
       if (currentBoard) currentBoard.isActive = true;
     },
+    addListToBoard(state, action: PayloadAction<string>) {
+      const currentBoard = state.boards.find(board => board.isActive === true);
+      currentBoard?.lists.push({
+        id: new Date().toISOString(),
+        name: action.payload,
+        tasks: [],
+      })
+    },
+
     // addListSet(state, action: PayloadAction<string>) {
     //   state.lists.push({
     //     id: new Date().toISOString(),
@@ -58,5 +73,5 @@ const boardsSlice = createSlice({
 });
 
 
-export const { addBoard, removeBoard, setActiveBoard } = boardsSlice.actions;
+export const { addBoard, removeBoard, setActiveBoard, addListToBoard } = boardsSlice.actions;
 export default boardsSlice.reducer;

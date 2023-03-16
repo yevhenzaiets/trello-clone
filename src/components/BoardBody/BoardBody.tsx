@@ -1,5 +1,6 @@
 import { useAppSelector } from "../../types/HookTypes";
-import ListBody from "../List/List";
+import ListCollection from "../ListCollection/ListCollection";
+// import ListBody from "../List/ListBody";
 import s from "./boardBody.module.css"
 
 // interface ListProps {
@@ -18,7 +19,8 @@ const BoardBody: React.FC = () => {
         <div className={s.listTitle}>
           <h2>{boardSet.find(board => board.isActive === true)?.title}</h2>
         </div>
-        <ListBody />
+        {/* <ListBody /> */}
+        <ListCollection />
       </div>
     </main>
   )
