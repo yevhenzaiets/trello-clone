@@ -1,5 +1,9 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 
+type BoardsState = {
+  boards: Board[],
+}
+
 type Board = {
   id: string;
   title: string;
@@ -10,11 +14,14 @@ type Board = {
 interface Lists {
   id: string;
   name: string;
-  tasks: [];
+  tasks: Tasks[];
+  completed: boolean;
 }
 
-type BoardsState = {
-  boards: Board[],
+interface Tasks {
+  id: string;
+  taskName: string;
+  condition: boolean;
 }
 
 const initialState: BoardsState = {
@@ -41,15 +48,30 @@ const boardsSlice = createSlice({
       const currentBoard = state.boards.find(board => board.id === action.payload);
       if (currentBoard) currentBoard.isActive = true;
     },
+    setActiveList(state, action: PayloadAction<string>) {
+      const activeBoard = state.boards.find(board => board.isActive === true);
+      const currentList = activeBoard?.lists.find(list => list.id === action.payload);
+      if (currentList) currentList.completed = true;
+    },
     addListToBoard(state, action: PayloadAction<string>) {
       const currentBoard = state.boards.find(board => board.isActive === true);
       currentBoard?.lists.push({
         id: new Date().toISOString(),
         name: action.payload,
         tasks: [],
+        completed: false,
       })
     },
-
+    addTaskToList(state, action: PayloadAction<string>) {
+      const board = state.boards.find(board => board.isActive === true);
+      board?.lists.find(list => list.completed === true)?.tasks.push({
+        id: new Date().toISOString(),
+        taskName: action.payload,
+        condition: false,
+      })
+      board?.lists.map(list => list.completed = false);
+      // console.log(action.payload)
+    },
     // addListSet(state, action: PayloadAction<string>) {
     //   state.lists.push({
     //     id: new Date().toISOString(),
@@ -73,5 +95,5 @@ const boardsSlice = createSlice({
 });
 
 
-export const { addBoard, removeBoard, setActiveBoard, addListToBoard } = boardsSlice.actions;
+export const { addBoard, removeBoard, setActiveBoard, addListToBoard, setActiveList, addTaskToList } = boardsSlice.actions;
 export default boardsSlice.reducer;
