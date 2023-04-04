@@ -12,8 +12,7 @@ const List: React.FC<ListProp> = ({ name, id }) => {
 
   const taskSet = useAppSelector(state => state.boards.boards).filter(list => list.isActive === true);
 
-  console.log(taskSet)
-
+  // console.log(taskSet)
   return (
     <div className={s.wrapper}>
       <div className={s.name}>

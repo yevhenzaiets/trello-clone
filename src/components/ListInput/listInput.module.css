@@ -11,3 +11,13 @@
 .listInp:focus-visible {
   outline: -webkit-focus-ring-color auto 1px;
 }
+
+.error {
+  padding: 15px 15px;
+  font-size: 16px;
+  border-radius: 5px;
+  border: 2.5px solid rgb(152, 3, 3);
+  width: 100%;
+  -webkit-box-shadow: 0 3px 3px rgba(0,0,0,.16), 0 3px 3px rgba(0,0,0,.23);
+  box-shadow: 0 3px 3px rgba(0,0,0,.16), 0 3px 3px rgba(0,0,0,.23);
+}

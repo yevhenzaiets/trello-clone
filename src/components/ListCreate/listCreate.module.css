@@ -22,6 +22,17 @@
   width: 200px;
 }
 
+.error {
+  border: 2.5px solid rgb(152, 3, 3);
+  padding: 11px 15px;
+  font-size: 16px;
+  border-radius: 5px;
+  width: 100%;
+  -webkit-box-shadow: 0 3px 3px rgb(0 0 0 / 16%), 0 3px 3px rgb(0 0 0 / 23%);
+  box-shadow: 0 3px 3px rgb(0 0 0 / 16%), 0 3px 3px rgb(0 0 0 / 23%);
+  width: 200px;
+}
+
 .closeButton{
   display: flex;
   align-self: self-end;
@@ -61,3 +72,13 @@
   display: flex;
   gap: 25px;
 }
+
+.errorText {
+  color:rgb(152, 3, 3);
+  text-shadow: 1px 1px 1px #fff;
+  font-weight: 400;
+  margin: 10px 0 0 0;
+  text-align: center;
+  font-size: 15px;
+}
+
